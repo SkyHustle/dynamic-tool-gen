@@ -1,0 +1,9 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore environment variables
+.env
+
+# Ignore Docker-related files
+*.log
