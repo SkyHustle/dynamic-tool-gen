@@ -1,9 +1,31 @@
-# Ignore Python cache files
+# Python virtual environment
+venv/
+
+# Byte-compiled files
 __pycache__/
 *.py[cod]
 
-# Ignore environment variables
-.env
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+.wheelhouse/
+.installed.cfg
+*.egg-info/
+.installed.cfg
+*.egg-info/
+MANIFEST
 
-# Ignore Docker-related files
-*.log
+# Pytest
+.cache
+
+# Environment variables
+.env
