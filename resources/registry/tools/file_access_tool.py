@@ -50,7 +50,6 @@ class FileAccessTool(ToolInterface):
 
         # Ensure the path is correct
         if not os.path.dirname(filename):
-        
             filename = os.path.join('./resources/data', filename)
         
         self.logger.debug(f"Attempting to read file at path: {filename}")
@@ -70,7 +69,7 @@ class FileAccessTool(ToolInterface):
             return error_msg
 
     def copy_file_to_container(self, local_file_name: str, container_name: str = "sandbox") -> str:
-        container_home_path = "/home/sandboxuser"
+        container_home_path = "/home/sandbox_user"
         self.logger.debug(f"Copying '{local_file_name}' to container '{container_name}'.")
 
         if not os.path.isfile(local_file_name):
@@ -100,6 +99,6 @@ class FileAccessTool(ToolInterface):
             self.logger.error(error_msg)
             raise RuntimeError(error_msg)
 
-        success_msg = f"Copied {local_file_name} into {container_name}:{container_home_path}/."
+        success_msg = f"Successfully copied {local_file_name} into {container_name}:{container_home_path}/."
         self.logger.debug(success_msg)
         return success_msg

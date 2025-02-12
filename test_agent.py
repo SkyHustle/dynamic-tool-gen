@@ -22,6 +22,6 @@ agent = FileAccessAgent()
 # Test the agent with the traffic_accidents.csv file
 user_message = "Can you show me the first few lines of traffic_accidents.csv?"
 logger.debug(f"Sending message to agent: {user_message}")
-response = agent.process_message(user_message)
+response = agent.task(user_message)
 print("\nAgent Response:")
 print(response) 
